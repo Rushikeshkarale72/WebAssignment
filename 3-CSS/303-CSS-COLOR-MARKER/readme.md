@@ -17,4 +17,4 @@ Figma Link : [Color Markers](https://www.freecodecamp.org/learn/2022/responsive-
 - Complete all above assignments in their respective folders
 - Html should be in `index.html` file and styling should be in `style.css` file
 
-## sceinshot Link- https://github.com/Rushikeshkarale72/WebAssignment/blob/main/3-CSS/303-CSS-COLOR-MARKER/Images/CSS303-01.png?raw=true
+## scrinshot Link- https://github.com/Rushikeshkarale72/WebAssignment/blob/main/3-CSS/303-CSS-COLOR-MARKER/Images/CSS303-01.png?raw=true

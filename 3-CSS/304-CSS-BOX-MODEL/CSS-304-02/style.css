@@ -1,1 +1,66 @@
-/* start your css here */
+* {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(247, 245, 245);
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #d3d3d3;
+    color: white;
+    padding: 20px 20px;
+    border: #f2f2f2;
+    border-radius: 20px;
+    cursor: pointer;
+    float: medium;
+  }
+  
+  input[type=submit] {
+    background-color: #000000;
+
+  }
+  col{
+    color: #f2f2f2;
+  }
+  .container {
+    border-radius: 5px;
+    background-color: #000000;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

@@ -16,3 +16,4 @@ Submission Link : [Building Cafe Menu](https://www.freecodecamp.org/learn/2022/r
 
 - Complete all above assignments in their respective folders
 - Html should be in `index.html` file and styling should be in `style.css` file
+## scrrenshot link- https://github.com/Rushikeshkarale72/WebAssignment/blob/main/3-CSS/302-CSS-Building-Cafe-Menu/Images/css302-01.png?raw=true

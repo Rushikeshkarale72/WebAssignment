@@ -4,9 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+      body{
+        background-color: cornflowerblue;
+      }
+      h1{
+        color: aliceblue;
+        -webkit-text-stroke: 2px blue;
+        font-weight: 900;
+        font-size: 50px;
+      }
+      span{
+        color: crimson;
+        font-weight: 900;
+        font-size: 18px;
+      }
+      .citySpan{
+        font-size: 22px;
+        color: aliceblue;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    Start your code here
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4 mx-auto">
+          <h1 class="text-center">Weather App</h1> 
+          <div class="form-group text-center">
+            <input type="text" class="form-control mt-4" placeholder="Enter the city here" id="textInput" onkeyup="fnInput(event)">
+            <button class="btn btn-primary mt-4" onclick="checkWeather()">Submit</button>
+          </div>
+          <div class="card mt-4" id="main">
+            <div class="card-header bg-primary text-white text-center">
+              <h4>Weather of <span id="city" class="citySpan"></span> </h4>
+            </div>
+            <div class="card-body p-4">
+              <p>Sky Conditions: <span id="conditions"></span> </p>
+              <p>Temperature: <span id="temperature"></span> </p>
+              <p>Wind Speed: <span id="windspeed"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var city=document.getElementById("city");
+      var conditions=document.getElementById("conditions");
+      var temperature=document.getElementById("temperature");
+      var windspeed=document.getElementById("windspeed");
+      var textInput=document.getElementById("textInput");
+      var main=document.getElementById("main");
+      main.style.display="none";
+      function checkWeather(){
+          if(textInput.value===""){
+              alert("Please enter your City");
+              return;
+          }
+          main.style.display="block";
+          fetch('https://api.openweathermap.org/data/2.5/weather?q='+textInput.value+'&appid=3a31505446781c155adf1743bdbddb8a').then(function(res){
+              return res.json();
+          },function(err){
+              console.log("Error in fetching Api!");
+          }).then(function(actualData){
+              city.innerHTML=actualData.name;
+              conditions.innerHTML=actualData.weather[0].description;
+              temperature.innerHTML=`${parseInt(actualData.main.temp-273.15).toFixed(2)}° C`;
+              windspeed.innerHTML=`${actualData.wind.speed} km/h`;
+          },function(){
+              console.log("Error in iterate Data!")
+          });
+      }
+      function fnInput(e){
+        if(textInput.value===""){
+          main.style.display="none";
+        }
+      }
+    </script>
   </body>
 </html>

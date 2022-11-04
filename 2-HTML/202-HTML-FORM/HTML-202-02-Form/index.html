@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-   <div><form action="">
-    personal Details <br>
-    Salutation: <br>
-    <label for="None">
-      <select name="None" id="None">
-      <option value="None">None</option>
-      </select>
-     </label><br>
-    First name:<br>
-    <input type="text" name="username"><br>
-    Last name:<br>
-    <input type="text" name="username"><br>
-    Gender:
-    <input type="radio" name="gender" id="male">
-    <label for="male">Male</label><br>
-    <input type="radio" name="gender" id="female">
-    <label for="female">Female</label><br>
-
-    <label for="birthday">Birthday:</label><br>
-<input type="date" id="birthday" name="birthday"><br>
-
-<label for="Address">Address:</label><br>
-<textarea rows="5" cols="50" name="Address" id="Address"></textarea><br>
-<br>
-<input type="submit" value="Submit">
-
-  </form>
-   </div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Personal Details</legend>
+        <form>
+            <p>Salutation</p>
+            <select name="salutation">
+                <option selected>--None--</option>
+                <option>Mr</option>
+                <option>Mrs</option>
+            </select><br><br>
+            <label>First Name:</label>
+            <input type="text"><br><br>
+            <label>Last Name:</label>
+            <input type="text"><br><br>
+            <label>Gender</label>
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female<br><br>
+            <label>Email:</label>
+            <input type="email"><br><br>
+            <label>Date Of Birth:</label>
+            <input type="date" name="birthdate"><br><br>
+            <label>Address:</label><br>
+            <textarea name="address" rows="3" columns="40"></textarea>
+        </form>
+    </fieldset>
+</body>
 </html>
